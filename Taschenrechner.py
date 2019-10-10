@@ -11,18 +11,15 @@ def zahl1(a):
     var=entry.get()
     entry.delete(0, END)
     entry.insert(0,str(var)+ str(a))
-
 def C():
     entry.delete(0, END)
-
 def addieren():
     erstenummer= entry.get()
     global erst
     erst =float(erstenummer)
     entry.delete(0, END)
     global counter
-    counter=1    
-    
+    counter=1        
 def subtrahieren():
     erstenummer= entry.get()
     global erst
@@ -30,7 +27,6 @@ def subtrahieren():
     entry.delete(0, END)
     global counter
     counter=2
-
 def mult():
     erstenummer= entry.get()
     global erst
@@ -38,15 +34,13 @@ def mult():
     entry.delete(0, END)
     global counter
     counter=3
-
 def div():
     erstenummer= entry.get()
     global erst
     erst =float(erstenummer)
     entry.delete(0, END)
     global counter
-    counter=4
-   
+    counter=4   
 def gleich():
     try:
         if counter==1:
@@ -56,7 +50,7 @@ def gleich():
             entry.insert(0, erst+float(zweitenummer))
         elif counter==2:
              zweitenummer=entry.get()
-             zweite=float(zweitenummer)
+             zwoite=float(zweitenummer)
              entry.delete(0, END)
              entry.insert(0, erst-float(zweitenummer))
         elif counter==3:
@@ -99,37 +93,23 @@ def gleich():
             rechnung=entry.get()
             entry.delete(0, END)
             entry.insert(0, zahl1/zahl2) 
-
-
 #Gestaltung Buttons#  
-var1=1
-var2=2
-var3=3
-var4=4
-var5=5
-var6=6
-var7=7
-var8=8
-var9=9
-var13="%"
-var15="="
-var16="0"
-a=Button(root, text=var1,padx=40, pady=20,command=lambda:zahl1(1))
-b=Button(root, text=var2,padx=40, pady=20,command=lambda:zahl1(2))
-c=Button(root, text=var3,padx=40, pady=20,command=lambda:zahl1(3))
-d=Button(root, text=var4,padx=40, pady=20,command=lambda:zahl1(4))
-e=Button(root, text=var5,padx=40, pady=20,command=lambda:zahl1(5))
-f=Button(root, text=var6,padx=40, pady=20,command=lambda:zahl1(6))
-g=Button(root, text=var7,padx=40, pady=20,command=lambda:zahl1(7))
-h=Button(root, text=var8,padx=40, pady=20,command=lambda:zahl1(8))
-i=Button(root, text=var9,padx=40, pady=20,command=lambda:zahl1(9))
-j=Button(root, text=var16,padx=40, pady=20,command=lambda:zahl1(0))
+a=Button(root, text=1,padx=40, pady=20,command=lambda:zahl1(1))
+b=Button(root, text=2,padx=40, pady=20,command=lambda:zahl1(2))
+c=Button(root, text=3,padx=40, pady=20,command=lambda:zahl1(3))
+d=Button(root, text=4,padx=40, pady=20,command=lambda:zahl1(4))
+e=Button(root, text=5,padx=40, pady=20,command=lambda:zahl1(5))
+f=Button(root, text=6,padx=40, pady=20,command=lambda:zahl1(6))
+g=Button(root, text=7,padx=40, pady=20,command=lambda:zahl1(7))
+h=Button(root, text=8,padx=40, pady=20,command=lambda:zahl1(8))
+i=Button(root, text=9,padx=40, pady=20,command=lambda:zahl1(9))
+j=Button(root, text=0,padx=40, pady=20,command=lambda:zahl1(0))
 k=Button(root,padx=39, pady=20, text="+", command =addieren)
 l=Button(root,padx=42, pady=20, text="-",command=subtrahieren)
 m=Button(root,padx=39, pady=20, text="*",command=mult)
 n=Button(root,padx=39, pady=20, text="%",command=div)
 o=Button(root,padx=39, pady=20, text="C",command=C)
-p=Button(root,padx=180, pady=20, text=var15,command=gleich)
+p=Button(root,padx=180, pady=20, text="=",command=gleich)
 a.grid(row=1, column=0,columnspan=1)
 b.grid(row=1, column=1,columnspan=1)
 c.grid(row=1, column=2,columnspan=1)
