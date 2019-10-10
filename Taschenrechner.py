@@ -1,10 +1,11 @@
 from tkinter import messagebox
 from tkinter import*
-
+from tkinter import ttk
 root=Tk()
 root.title("Taschenrechner")
 entry=Entry(root, width=35, borderwidth=5)
 entry.grid(row=0,column=0,columnspan=3,padx=10,pady=10)
+root.configure(background="black")
 #Funktionen
 var=""
 def zahl1(a):
@@ -50,7 +51,7 @@ def gleich():
             entry.insert(0, erst+float(zweitenummer))
         elif counter==2:
              zweitenummer=entry.get()
-             zwoite=float(zweitenummer)
+             zweite=float(zweitenummer)
              entry.delete(0, END)
              entry.insert(0, erst-float(zweitenummer))
         elif counter==3:
@@ -94,22 +95,22 @@ def gleich():
             entry.delete(0, END)
             entry.insert(0, zahl1/zahl2) 
 #Gestaltung Buttons#  
-a=Button(root, text=1,padx=40, pady=20,command=lambda:zahl1(1))
-b=Button(root, text=2,padx=40, pady=20,command=lambda:zahl1(2))
-c=Button(root, text=3,padx=40, pady=20,command=lambda:zahl1(3))
-d=Button(root, text=4,padx=40, pady=20,command=lambda:zahl1(4))
-e=Button(root, text=5,padx=40, pady=20,command=lambda:zahl1(5))
-f=Button(root, text=6,padx=40, pady=20,command=lambda:zahl1(6))
-g=Button(root, text=7,padx=40, pady=20,command=lambda:zahl1(7))
-h=Button(root, text=8,padx=40, pady=20,command=lambda:zahl1(8))
-i=Button(root, text=9,padx=40, pady=20,command=lambda:zahl1(9))
-j=Button(root, text=0,padx=40, pady=20,command=lambda:zahl1(0))
-k=Button(root,padx=39, pady=20, text="+", command =addieren)
-l=Button(root,padx=42, pady=20, text="-",command=subtrahieren)
-m=Button(root,padx=39, pady=20, text="*",command=mult)
-n=Button(root,padx=39, pady=20, text="%",command=div)
-o=Button(root,padx=39, pady=20, text="C",command=C)
-p=Button(root,padx=180, pady=20, text="=",command=gleich)
+a=Button(root, text=1,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(1))
+b=Button(root, text=2,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(2))
+c=Button(root, text=3,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(3))
+d=Button(root, text=4,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(4))
+e=Button(root, text=5,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(5))
+f=Button(root, text=6,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(6))
+g=Button(root, text=7,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(7))
+h=Button(root, text=8,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(8))
+i=Button(root, text=9,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(9))
+j=Button(root, text=0,bg="white",fg="black",font="Arial 28 italic",padx=40, pady=20,command=lambda:zahl1(0))
+k=Button(root,padx=39,bg="white",fg="black",font="Arial 28 italic", pady=20, text="+", command =addieren)
+l=Button(root,padx=45,bg="white",fg="black",font="Arial 28 italic", pady=20, text="-",command=subtrahieren)
+m=Button(root,padx=43,bg="white",fg="black",font="Arial 28 italic", pady=20, text="*",command=mult)
+n=Button(root,padx=34,bg="white",fg="black",font="Arial 28 italic", pady=20, text="%",command=div)
+o=Button(root,padx=37,bg="white",fg="black",font="Arial 28 italic", pady=20, text="C",command=C)
+p=Button(root,padx=172,bg="white",fg="black",font="Arial 28 italic", pady=18, text="=",command=gleich)
 a.grid(row=1, column=0,columnspan=1)
 b.grid(row=1, column=1,columnspan=1)
 c.grid(row=1, column=2,columnspan=1)
@@ -126,52 +127,5 @@ m.grid(row=5, column=0,columnspan=1)
 n.grid(row=5, column=1,columnspan=1)
 o.grid(row=5, column=2,columnspan=1)
 p.grid(row=6,column=0,columnspan=3)
-a["bg"]="#FFFFFF"
-b["bg"]="#FFFFFF"
-c["bg"]="#FFFFFF"
-d["bg"]="#FFFFFF"
-e["bg"]="#FFFFFF"
-f["bg"]="#FFFFFF"
-g["bg"]="#FFFFFF"
-h["bg"]="#FFFFFF"
-i["bg"]="#FFFFFF"
-j["bg"]="#FFFFFF"
-k["bg"]="#FFFFFF"
-l["bg"]="#FFFFFF"
-m["bg"]="#FFFFFF"
-n["bg"]="#FFFFFF"
-o["bg"]="#FFFFFF"
-p["bg"]="#FFFFFF"
-a["fg"]="#000000"
-b["fg"]="#000000"
-c["fg"]="#000000"
-d["fg"]="#000000"
-e["fg"]="#000000"
-f["fg"]="#000000"
-g["fg"]="#000000"
-h["fg"]="#000000"
-i["fg"]="#000000"
-j["fg"]="#000000"
-k["fg"]="#000000"
-l["fg"]="#000000"
-m["fg"]="#000000"
-n["fg"]="#000000"
-o["fg"]="#000000"
-p["fg"]="#000000"
-a["font"]="Arial 28 italic"
-b["font"]="Arial 28 italic"
-c["font"]="Arial 28 italic"
-d["font"]="Arial 28 italic"
-e["font"]="Arial 28 italic"
-f["font"]="Arial 28 italic"
-g["font"]="Arial 28 italic"
-h["font"]="Arial 28 italic"
-i["font"]="Arial 28 italic"
-j["font"]="Arial 28 italic"
-k["font"]="Arial 28 italic"
-l["font"]="Arial 28 italic"
-m["font"]="Arial 28 italic"
-n["font"]="Arial 28 italic"
-o["font"]="Arial 28 italic"
-p["font"]="Arial 28 italic"
+
 root.mainloop()
