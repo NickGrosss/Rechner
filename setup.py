@@ -19,7 +19,7 @@ try:
 
         tests_require=['pytest', 'pytest-runner', 'pytest-cov', 'pytest-mock', 'mock'],
         setup_requires=['pytest-runner'],
-        install_requires=['click==7.0', 'flask==1.1.1']
+        install_requires=['click==7.0', 'flask==2.3.2']
     )
 
 finally:
